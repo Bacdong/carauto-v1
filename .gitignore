@@ -1,0 +1,4 @@
+# Install the path of files and folders that do not need to push to github here #
+# Eg: images/requirements.txt
+
+images/requirements.txt
