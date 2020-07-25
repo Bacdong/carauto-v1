@@ -17,5 +17,6 @@ Updating...
 
 #### Note: ####
 ```
-Not complete, just the project initialization.
+- Not complete, just the project initialization.
+- Updating...
 ```
