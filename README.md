@@ -21,7 +21,10 @@ Installation:
 ```
 Attension:
 ```
-Use HTML5/CSS3 and Sass/Scss for project. Thanks!
+- Please operate on the specified branch.
+- Use HTML5/CSS3 and Sass/Scss for project. 
+- If you have questions, ask our chat team questions on messenger.
+  Thanks!
 ```
 
 #### Developments Installation: ####
