@@ -10,9 +10,9 @@ Updating...
 
 #### Participants: ####
 - [Bui Trung Hau](https://github.com/BuiTrungHau1312)
-- [Luu Duc Hoa](https://github.com/Bacdong/car_store)
+- [Luu Duc Hoa](https://github.com/Luuduchoa2504)
 - [Van Minh Hoang](https://github.com/vanminhhoang)
-- [Do Truong Giang](https://github.com/Bacdong/car_store)
+- [Do Truong Giang](https://github.com/doTruongGiang-IT)
 - [Duong Bac Dong](https://github.com/Bacdong)
 
 #### Note: ####
