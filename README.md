@@ -3,6 +3,27 @@
 Folder name: carstore
 ```
 
+#### Note for participants: ####
+Installation:
+```
+- Extension for VSCode:
+    Live Sass Compile
+- Setting for setting.json of Live Sass Compile:
+    Open file setting.txt and copy all content, then: 
+        open file setting.json of Live Sass Compile and paste:
+            {
+                "workbench.colorTheme": "Monokai",
+                "workbench.iconTheme": "eq-material-theme-icons-darker",
+                ...
+                // Paste here !!!
+            }
+    Turn off VSCode and open again to use.
+```
+Attension:
+```
+Use HTML5/CSS3 and Sass/Scss for project. Thanks!
+```
+
 #### Developments Installation: ####
 ```
 Updating...
