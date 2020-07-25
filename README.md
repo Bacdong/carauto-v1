@@ -9,7 +9,7 @@ Installation:
 - Extension for VSCode:
     Live Sass Compile
 - Setting for setting.json of Live Sass Compile:
-    Open file setting.txt and copy all content, then: 
+    + Open file setting.txt and copy all content, then: 
         open file setting.json of Live Sass Compile and paste:
             {
                 "workbench.colorTheme": "Monokai",
@@ -17,7 +17,7 @@ Installation:
                 ...
                 // Paste here !!!
             }
-    Turn off VSCode and open again to use.
+    + Turn off VSCode and open again to use.
 ```
 Attension:
 ```
