@@ -176,4 +176,18 @@ body {
   font-size: 1.6rem;
   color: #FFC300;
 }
+
+main {
+  width: 70%;
+  background-color: yellow;
+}
+
+main div {
+  width: 50%;
+  background-color: red;
+}
+
+main h1 {
+  color: blue;
+}
 /*# sourceMappingURL=style.css.map */
