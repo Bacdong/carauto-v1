@@ -81,7 +81,7 @@ body .app {
   background-color: #2C2C2C;
 }
 
-.menu-list .list-item .item-link, .navbars-info .info-social .social-list .social-item .social-link {
+.menu-list .list-item .item-link, .info-brief p .brief-info__link, .navbars-info .info-social .social-list .social-item .social-link {
   display: block;
   text-decoration: none;
   font-weight: 500;
@@ -147,7 +147,7 @@ body .app {
 
 .menu-list .list-item .item-link {
   font-size: 1.4rem;
-  line-height: 2.2rem;
+  line-height: 2.6rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
@@ -155,11 +155,18 @@ body .app {
 
 .menu-list .list-item:hover {
   border-bottom: 1px solid #FFC300;
+<<<<<<< HEAD
   transition: all ease-in 0.2s;
+=======
+  -webkit-transition: all ease-in-out 0.24s;
+  transition: all ease-in-out 0.24s;
+>>>>>>> master
 }
 
 .menu-list .list-item:hover .item-link {
   color: #FFF;
+  -webkit-transition: all ease-in-out 0.24s;
+  transition: all ease-in-out 0.24s;
 }
 
 .menu-list .list-item:hover.active .item-link {
@@ -183,6 +190,11 @@ body .app {
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
   user-select: none;
+}
+
+.info-brief p .brief-info__link {
+  color: #FFC300;
+  opacity: 0.8;
 }
 
 .navbars-info .info-social {
