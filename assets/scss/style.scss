@@ -106,7 +106,7 @@ body {
             @extend %anchor;
             
             font-size: 1.4rem;
-            line-height: 2.2rem;
+            line-height: 2.6rem;
             text-transform: uppercase;
             text-align: center;
             letter-spacing: 1px;
@@ -114,10 +114,11 @@ body {
 
         &:hover {
             border-bottom: 1px solid $yellow;
-            transition: all ease-in 0.2s;
+            transition: all ease-in-out 0.24s;
 
             .item-link {
                 color: $white;
+                transition: all ease-in-out 0.24s;
             }
 
             &.active {
@@ -150,6 +151,19 @@ body {
                 text-align: center;
                 user-select: none;
             }
+        }
+    }
+}
+
+.info-brief {
+
+    p {
+
+        .brief-info__link {
+            @extend %anchor;
+
+            color: $yellow;
+            opacity: 0.8;
         }
     }
 }
