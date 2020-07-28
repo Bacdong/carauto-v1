@@ -37,3 +37,6 @@
 .icon-twitter:before {
   content: "\ea96";
 }
+.icon-bars:before {
+  content: "\e900";
+}
