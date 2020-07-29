@@ -1,4 +1,5 @@
 @font-face {
+<<<<<<< HEAD
   font-family: 'icomoon';
   src:  url('../../icon/icomoon.eot?gks4qq');
   src:  url('../../icon/icomoon.eot?gks4qq#iefix') format('embedded-opentype'),
@@ -15,33 +16,45 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
+=======
+    font-family: 'icomoon';
+    src: url('../../icon/icomoon.eot?gks4qq');
+    src: url('../../icon/icomoon.eot?gks4qq#iefix') format('embedded-opentype'), url('../../icon/icomoon.ttf?gks4qq') format('truetype'), url('../../icon/icomoon.woff?gks4qq') format('woff'), url('../../icon/icomoon.svg?gks4qq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+>>>>>>> 2578981e4b7ffa9a78c5914905149786619a84e9
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-facebook:before {
-  content: "\ea90";
+    content: "\ea90";
 }
+
 .icon-instagram:before {
-  content: "\ea92";
+    content: "\ea92";
 }
+
 .icon-telegram:before {
-  content: "\ea95";
+    content: "\ea95";
 }
+
 .icon-twitter:before {
+<<<<<<< HEAD
   content: "\ea96";
 }
 .icon-bars:before {
@@ -115,4 +128,7 @@
 }
 .icon-exit:before {
   content: "\ea14";
+=======
+    content: "\ea96";
+>>>>>>> 2578981e4b7ffa9a78c5914905149786619a84e9
 }

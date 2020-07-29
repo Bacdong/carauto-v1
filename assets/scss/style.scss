@@ -1,5 +1,4 @@
 @import '_variable.scss';
-
 * {
     margin: 0;
     padding: 0;
@@ -98,15 +97,12 @@ body {
     bottom: 0;
     width: calc(20% - 1.8rem);
     background-color: $background;
-
     .header-navbars {
         @extend %flex-layout;
-
         width: 100%;
         height: 100%;
         flex-direction: column;
         justify-content: space-evenly;
-
         .navbars-title {
             width: 100%;
             text-align: center;
@@ -115,12 +111,10 @@ body {
 }
 
 .navbars-title {
-
     .navbars-title__link {
         display: block;
         width: 100%;
         text-decoration: none;
-
         h1 {
             color: $white;
             font-size: 2.2rem;
@@ -132,13 +126,10 @@ body {
 }
 
 .header-navbars {
-
     .navbars-menu {
         width: 100%;
-
         .menu-list {
             @extend %flex-layout;
-
             width: 100%;
             list-style: none;
             flex-direction: column;
@@ -147,41 +138,41 @@ body {
 }
 
 .menu-list {
-
     .list-item {
         @extend %flex-layout;
-
         margin-bottom: 0.8rem;
-
         &.active {
+<<<<<<< HEAD
             border-bottom: 1.1rem solid $yellow;        
             
+=======
+            border-bottom: 1px solid $yellow;
+>>>>>>> 2578981e4b7ffa9a78c5914905149786619a84e9
             .item-link {
                 color: $yellow;
             }
         }
-
         .item-link {
             @extend %anchor;
-            
             font-size: 1.4rem;
             line-height: 2.6rem;
             text-transform: uppercase;
             text-align: center;
             letter-spacing: 1px;
         }
-
         &:hover {
             border-bottom: 1px solid $yellow;
+<<<<<<< HEAD
             transition: all ease-in-out 0.24s;
 
+=======
+            transition: all ease-in 0.2s;
+>>>>>>> 2578981e4b7ffa9a78c5914905149786619a84e9
             .item-link {
                 color: $white;
                 transition: all ease-in-out 0.24s;
             }
-
             &.active {
-
                 .item-link {
                     color: $yellow;
                 }
@@ -191,18 +182,14 @@ body {
 }
 
 .header-navbars {
-
     .navbars-info {
         @extend %flex-layout;
-
         width: 100%;
         flex-direction: column;
         justify-content: space-between;
-
         .info-brief {
             width: 100%;
             padding: 0 2rem 2rem 2rem;
-
             p {
                 font-size: 1.3rem;
                 font-weight: 500;
@@ -228,30 +215,22 @@ body {
 }
 
 .navbars-info {
-
     .info-social {
         width: 100%;
-
         .social-list {
             @extend %flex-layout;
-
             width: 100%;
             list-style: none;
-
             .social-item {
                 margin: 0 0.6rem;
-
                 .social-link {
                     @extend %anchor;
-                    
                     i {
                         font-size: 1.6rem;
                         color: rgba(255, 255, 255, 0.3);
                         transition: all ease-in 0.2s;
                     }
-
                     &:hover {
-
                         i {
                             font-size: 1.6rem;
                             color: $yellow;
