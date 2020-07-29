@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../template/profile/assets/scss/style.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
