@@ -44,6 +44,9 @@
 .icon-twitter:before {
   content: "\ea96";
 }
+.icon-bars:before {
+  content: "\e900";
+}
 .icon-office:before {
   content: "\e903";
 }
@@ -112,16 +115,4 @@
 }
 .icon-exit:before {
   content: "\ea14";
-}
-.icon-facebook:before {
-  content: "\ea90";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-telegram:before {
-  content: "\ea95";
-}
-.icon-twitter:before {
-  content: "\ea96";
 }
