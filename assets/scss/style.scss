@@ -142,7 +142,7 @@ body {
         @extend %flex-layout;
         margin-bottom: 0.8rem;
         &.active {
-            border-bottom: 1.1rem solid $yellow;        
+            border-bottom: 1px solid $yellow;        
             
             .item-link {
                 color: $yellow;
