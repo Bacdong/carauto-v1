@@ -142,12 +142,8 @@ body {
         @extend %flex-layout;
         margin-bottom: 0.8rem;
         &.active {
-<<<<<<< HEAD
             border-bottom: 1.1rem solid $yellow;        
             
-=======
-            border-bottom: 1px solid $yellow;
->>>>>>> 2578981e4b7ffa9a78c5914905149786619a84e9
             .item-link {
                 color: $yellow;
             }
@@ -162,12 +158,8 @@ body {
         }
         &:hover {
             border-bottom: 1px solid $yellow;
-<<<<<<< HEAD
             transition: all ease-in-out 0.24s;
 
-=======
-            transition: all ease-in 0.2s;
->>>>>>> 2578981e4b7ffa9a78c5914905149786619a84e9
             .item-link {
                 color: $white;
                 transition: all ease-in-out 0.24s;
