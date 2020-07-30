@@ -1,4 +1,5 @@
 @import '_variable.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -147,7 +148,7 @@ body {
         @extend %flex-layout;
         margin-bottom: 0.8rem;
         &.active {
-            border-bottom: .1rem solid $yellow;        
+            border-bottom: 1px solid $yellow;        
             
             .item-link {
                 color: $yellow;
@@ -162,7 +163,7 @@ body {
             letter-spacing: .1rem;
         }
         &:hover {
-            border-bottom: .1rem solid $yellow;
+            border-bottom: 1px solid $yellow;
             transition: all ease-in-out 0.24s;
 
             .item-link {
@@ -825,7 +826,7 @@ body {
 /* Animation */
 @keyframes anim-carousel-show {
     from {
-        opacity: .4;
+        opacity: 0.4;
     } to {
         opacity: 1;
     }

@@ -29,7 +29,7 @@ body .app {
   justify-content: center;
 }
 
-.menu-list .list-item .item-link, .navbars-info .info-social .social-list .social-item .social-link, .row-text .text-link {
+.menu-list .list-item .item-link, .navbars-info .info-social .social-list .social-item .social-link, .row-text .text-link, .footer-contact .btn-contact {
   display: block;
   text-decoration: none;
   font-weight: 500;
@@ -37,7 +37,6 @@ body .app {
 }
 
 .header {
-  opacity: 0.8;
   position: fixed;
   top: 0;
   left: 0;
@@ -96,7 +95,7 @@ body .app {
 
 .menu-list .list-item .item-link {
   font-size: 1.4rem;
-  line-height: 2.2rem;
+  line-height: 2.6rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
@@ -160,7 +159,6 @@ body .app {
 
 .app .border {
   width: 1.6rem;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.03);
 }
 
@@ -310,10 +308,16 @@ body .app {
   font-weight: 400;
   letter-spacing: 1px;
   border-radius: 2px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+#contact .contact-btn .btn-send:hover {
+  opacity: 0.8;
 }
 
 .content-last {
-  padding: 1.5rem 3rem;
+  padding: 3rem;
 }
 
 .content-last h2 {
@@ -344,15 +348,20 @@ body .app {
 }
 
 .footer-contact .btn-contact {
-  font-size: 1.3rem;
-  padding: 1.5rem 3rem;
+  max-width: 16rem;
+  font-size: 1.4rem;
+  padding: 1.3rem 0;
+  text-align: center;
   text-transform: uppercase;
   background-color: #FFC300;
-  outline: none;
-  border: none;
   letter-spacing: 1px;
   font-weight: 400;
   color: #FFF;
-  border-radius: 5.5rem;
+  border-radius: 999px;
+  transition: all ease 0.2s;
+}
+
+.footer-contact .btn-contact:hover {
+  opacity: 0.82;
 }
 /*# sourceMappingURL=contact.css.map */
