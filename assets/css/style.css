@@ -18,6 +18,7 @@ body {
 }
 
 body .app {
+  user-select: none;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -39,7 +40,7 @@ body .app {
   border-radius: 50%;
   padding: 0;
   z-index: 10;
-  top: 67rem;
+  top: 80%;
   left: 2.5rem;
 }
 
@@ -88,6 +89,7 @@ body .app {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* CSS header */
 .header {
   position: fixed;
   top: 0;
@@ -95,6 +97,8 @@ body .app {
   bottom: 0;
   width: calc(20% - 1.8rem);
   background-color: #2C2C2C;
+  transition: all linear 0.26s;
+  z-index: 30;
 }
 
 .header .header-navbars {
@@ -138,7 +142,7 @@ body .app {
 }
 
 .menu-list .list-item.active {
-  border-bottom: 1.1rem solid #FFC300;
+  border-bottom: 0.1rem solid #FFC300;
 }
 
 .menu-list .list-item.active .item-link {
@@ -150,22 +154,16 @@ body .app {
   line-height: 2.6rem;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
 }
 
 .menu-list .list-item:hover {
-  border-bottom: 1px solid #FFC300;
-<<<<<<< HEAD
-  transition: all ease-in 0.2s;
-=======
-  -webkit-transition: all ease-in-out 0.24s;
+  border-bottom: 0.1rem solid #FFC300;
   transition: all ease-in-out 0.24s;
->>>>>>> master
 }
 
 .menu-list .list-item:hover .item-link {
   color: #FFF;
-  -webkit-transition: all ease-in-out 0.24s;
   transition: all ease-in-out 0.24s;
 }
 
@@ -221,6 +219,57 @@ body .app {
   color: #FFC300;
 }
 
+.open-nav,
+.close-nav {
+  --margin: 4%;
+  position: fixed;
+  left: var(--margin);
+  top: var(--margin);
+  z-index: 100;
+  font-size: 3.5rem;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+  transition: all linear 0.24s;
+}
+
+#hidden-show-nav:checked ~ .header {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#hidden-show-nav:checked ~ .close-nav {
+  opacity: 1;
+  display: block;
+  left: calc(4% + 32rem);
+}
+
+#hidden-show-nav:checked ~ .open-nav {
+  opacity: 0;
+  display: block;
+  left: calc(4% + 32rem);
+}
+
+#hidden-show-nav:checked ~ .nav-overlay {
+  opacity: 1;
+  display: block;
+  transition: all linear 0.24s;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* CSS header */
+/* CSS section */
 .container {
   width: 80%;
 }
@@ -229,7 +278,7 @@ body .app {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  margin-bottom: 18rem;
+  margin-bottom: 9rem;
 }
 
 .container .carousel-container .slide-show {
@@ -237,6 +286,46 @@ body .app {
   min-height: 100vh;
   display: flex;
   overflow: hidden;
+}
+
+.author-container {
+  width: 100%;
+  display: flex;
+  height: 9rem;
+}
+
+.author-container .div-title {
+  width: 50%;
+}
+
+.author-container .div-author {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.author-container .div-author .btn-contact {
+  margin: 0 0;
+}
+
+.author-container .div-author .login {
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.author-container .div-author .register {
+  text-decoration: none;
+  color: #FFC300;
+  font-size: 1.9rem;
+  margin: 0 3.6rem;
+  text-transform: capitalize;
+}
+
+.author-container .div-author .register:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .slide-show {
@@ -254,13 +343,21 @@ body .app {
   min-height: 100vh;
 }
 
+.slide-show #dot1 {
+  top: 77%;
+}
+
+.slide-show #dot3 {
+  top: 83%;
+}
+
 .slide-show #slide-1:checked ~ div.item1 {
   display: block;
   animation: anim-carousel-show .5s ease-in-out;
 }
 
 .slide-show #slide-1:checked ~ #dot1 {
-  background-color: yellow;
+  background-color: #FFC300;
 }
 
 .slide-show #slide-2:checked ~ div.item2 {
@@ -269,7 +366,7 @@ body .app {
 }
 
 .slide-show #slide-2:checked ~ #dot2 {
-  background-color: yellow;
+  background-color: #FFC300;
 }
 
 .slide-show #slide-3:checked ~ div.item3 {
@@ -278,15 +375,7 @@ body .app {
 }
 
 .slide-show #slide-3:checked ~ #dot3 {
-  background-color: yellow;
-}
-
-.slide-show #dot1 {
-  top: 64rem;
-}
-
-.slide-show #dot3 {
-  top: 70rem;
+  background-color: #FFC300;
 }
 
 .welcome-container {
@@ -364,7 +453,7 @@ body .app {
   font-size: 1.4rem;
   letter-spacing: .3rem;
   text-transform: uppercase;
-  line-height: .6rem;
+  line-height: 1.4rem;
 }
 
 .div-img-left,
@@ -460,7 +549,7 @@ body .app {
   left: 2.5rem;
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .work-content .img-car:hover .desc {
@@ -490,6 +579,11 @@ body .app {
 .read-container .blog-entry .desc {
   width: 33.33333%;
   padding: 1.5rem;
+}
+
+.desc {
+  cursor: pointer;
+  transition: all linear 0.2;
 }
 
 .desc .desc-img {
@@ -535,7 +629,7 @@ body .app {
 .footer-container {
   width: 100%;
   padding: 4.8rem 1.5rem;
-  background: #fafafa;
+  background: #FAFAFA;
 }
 
 .footer-container .footer-content {
@@ -565,7 +659,15 @@ body .app {
   margin-bottom: 1.5rem;
 }
 
+.btn-contact:hover {
+  opacity: 0.86;
+  transition: all ease 0.2s;
+}
+
 .btn-contact a {
+  text-align: center;
+  width: 100%;
+  line-height: 5.2rem;
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
@@ -619,6 +721,7 @@ body .app {
   display: block;
 }
 
+/* CSS section */
 /* Animation */
 @keyframes anim-carousel-show {
   from {
@@ -634,7 +737,21 @@ body .app {
 /* Mobile: width < 740px*/
 @media only screen and (max-width: 46.1875em) {
   .header {
-    display: none;
+    min-width: 30rem;
+    transform: translateX(-150%);
+    opacity: 0;
+    transition: all linear 0.26s;
+  }
+  .box-shadow-on-mobile-tablet {
+    box-shadow: 0 1px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  .open-nav {
+    opacity: 1;
+    display: block;
+  }
+  .close-nav {
+    opacity: 0;
+    display: block;
   }
   .container {
     width: 100%;
