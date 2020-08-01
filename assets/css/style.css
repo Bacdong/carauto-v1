@@ -38,6 +38,7 @@ body .app {
   width: var(--height);
   margin: 0 0.2rem;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 0;
   z-index: 10;
   top: 80%;
@@ -72,14 +73,6 @@ body .app {
   height: 0.4rem;
   content: '';
   background: #FFC300;
-}
-
-.slide-show .dot div {
-  --size: 0.9rem;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background-color: #2C2C2C;
 }
 
 .menu-list .list-item .item-link, .info-brief p .brief-info__link, .navbars-info .info-social .social-list .social-item .social-link {
@@ -357,7 +350,9 @@ body .app {
 }
 
 .slide-show #slide-1:checked ~ #dot1 {
-  background-color: #FFC300;
+  border-radius: 50%;
+  border: 2px solid #FFC300;
+  background-color: transparent;
 }
 
 .slide-show #slide-2:checked ~ div.item2 {
@@ -366,7 +361,9 @@ body .app {
 }
 
 .slide-show #slide-2:checked ~ #dot2 {
-  background-color: #FFC300;
+  border-radius: 50%;
+  border: 2px solid #FFC300;
+  background-color: transparent;
 }
 
 .slide-show #slide-3:checked ~ div.item3 {
@@ -375,7 +372,9 @@ body .app {
 }
 
 .slide-show #slide-3:checked ~ #dot3 {
-  background-color: #FFC300;
+  border-radius: 50%;
+  border: 2px solid #FFC300;
+  background-color: transparent;
 }
 
 .welcome-container {

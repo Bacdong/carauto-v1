@@ -40,6 +40,7 @@ body {
     width: var(--height);
     margin: 0 0.2rem;
     border-radius: 50%;
+    background-color: $grey;
     @extend %flex-layout;
     padding: 0;
     z-index: 10;
@@ -384,11 +385,9 @@ body {
 
     .dot {
         @extend %dots-layout;
-
-        div {
-           @extend %dots-div;
-        }
     }
+
+    
 
     #slide-1:checked {
         ~ div.item1 {
@@ -397,7 +396,9 @@ body {
         }
 
         ~ #dot1 {
-            background-color: $yellow;
+            border-radius: 50%;
+            border: 2px solid $yellow;
+            background-color: transparent;
         }
     }
 
@@ -408,7 +409,9 @@ body {
         }
 
         ~ #dot2 {
-            background-color: $yellow;
+            border-radius: 50%;
+            border: 2px solid $yellow;
+            background-color: transparent;
         }
     }
 
@@ -419,7 +422,9 @@ body {
         }
 
         ~ #dot3 {
-            background-color: $yellow;
+            border-radius: 50%;
+            border: 2px solid $yellow;
+            background-color: transparent;
         }
     }
 }
