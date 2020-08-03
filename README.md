@@ -30,7 +30,17 @@ Attension:
 
 To use API:
 ```
-Change IP address localhost or 127.0.0.1 in your PC with new IP address: carauto.local
+    Change IP address localhost or 127.0.0.1 in your PC with new IP address: carauto.local
+    * To use POST method create new product :
+        {
+            "name" = ,
+            "image" = ,
+            "price" = ,
+            "brief" = ,
+            "category_id" = ,
+            "status_product" = ,
+            "url" = ,
+        }
 ```
 
 #### Developments Installation: ####
