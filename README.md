@@ -28,6 +28,11 @@ Attension:
   Thanks!
 ```
 
+To use API:
+```
+Change IP address localhost or 127.0.0.1 in your PC with new IP address: carauto.local
+```
+
 #### Developments Installation: ####
 ```
 Updating...
