@@ -23,7 +23,7 @@ body .app {
   justify-content: flex-end;
 }
 
-.form-search, .product-img .car-avatar .name {
+.btn-contact, .form-search, .product-img .car-avatar .name {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,6 +84,28 @@ body .app {
 .author-container .div-author .register:hover {
   opacity: 0.8;
   text-decoration: underline;
+}
+
+.btn-contact {
+  height: 5.2rem;
+  width: 16rem;
+  border-radius: 6rem;
+  background-color: #FFC300;
+  margin-bottom: 1.5rem;
+}
+
+.btn-contact:hover {
+  opacity: 0.86;
+  transition: all ease 0.2s;
+}
+
+.btn-contact a {
+  text-align: center;
+  width: 100%;
+  line-height: 5.2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .search {
@@ -225,6 +247,7 @@ body .app {
 }
 
 .product-detail .product-group-btn {
+  display: flex;
   width: 100%;
   margin-bottom: 1.4rem;
 }
@@ -267,8 +290,15 @@ body .app {
   margin-right: 5rem;
 }
 
+.product-detail .product-info .discount,
+.product-detail .product-info .evaluate {
+  display: flex;
+  align-items: center;
+}
+
 .product-detail .product-info span {
   font-size: 1.2rem;
+  padding-left: 1rem;
 }
 
 .product-detail .product-info i {
@@ -284,6 +314,54 @@ body .app {
   }
   .container {
     width: 100%;
+  }
+  .author-container .div-title {
+    display: none;
+  }
+  .author-container .div-author {
+    width: 100%;
+  }
+  .search-bar {
+    flex-direction: column;
+  }
+  .search-bar .form-search .icon-enter {
+    display: none;
+  }
+  .search-bar .form-search input {
+    padding-left: 0;
+  }
+  .product-container .product {
+    padding: 3rem;
+  }
+  .product-container .product .product-item {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin: 0 0;
+  }
+  .product-img {
+    width: 100%;
+    height: 18rem;
+  }
+  .product-detail {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .product-detail .product-group-btn {
+    justify-content: space-around;
+  }
+  .product-detail .product-group-btn .btn-view,
+  .product-detail .product-group-btn .btn-oder {
+    width: 12rem;
+    font-size: 1.4rem;
+    margin-right: 0;
+    padding: 1rem 2rem;
+  }
+  .product-detail .product-info {
+    flex-direction: column;
+  }
+  .product-detail .product-info span {
+    font-size: 1.5rem;
   }
 }
 
