@@ -117,4 +117,16 @@ var s = `
 var divElement = document.querySelector(".templateStringHeader");
 divElement.innerHTML = s;
 
+// fix bug nav mobile
+// which will be triggered when the window resizes
+$( window ).bind("resize", function(){
+    var widthBrowser = $(document).width();
+    var inputTypeCheckboxElement = document.querySelector("#hidden-show-nav");
+    if(widthBrowser > 739) 
+        inputTypeCheckboxElement.checked = false;
+});
+
+
+
+
 
