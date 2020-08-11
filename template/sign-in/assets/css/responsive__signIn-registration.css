@@ -1,0 +1,243 @@
+/* header on tablet and mobile */
+.header-replace {
+    width: 100%;
+    height: 65px;
+    background-color: var(--background-header);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.icon-options {
+    font-size: 2.6rem;
+    color: var(--white-color);
+    position: relative;
+}
+/* menu replace on tablet & mobile */
+.over-lay-tablet-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0,0,0,0.2);
+    display: none;
+    animation: FadeIn linear 0.2s;
+    transition: FadeIn linear 0.2s ;
+}
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.list-tablet-mobile {
+    width: 300px;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 65px 0 0 0;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: all linear 0.3s;
+}
+
+.list-tablet-mobile__item {
+    display: block;
+    list-style: none;   
+}
+
+.tablet-mobile-item__link {
+    display: block;
+    text-decoration: none;
+    padding: 0.1rem 0 0 2rem;
+    color: var(--text-color);
+}
+.tablet-mobile-item__link:active {
+    background-color: rgb(0,0,0,0.1);
+}
+
+.input-select:checked ~ .over-lay-tablet-mobile {
+    display: block;
+    z-index: 1;
+}
+.input-select:checked ~ .list-tablet-mobile {
+    transform: translateX(0%);
+}
+
+
+/* copyright */
+section.copyright-tablet-mobile {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 25rem 0 0 0;
+}
+/* footer replace */
+.footer-replace {
+    background-color: var(--background-header);
+    height: 25px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 0;
+    display: none;
+}
+a.footer-replace__link {
+    display: inline-block;
+    text-decoration: none;
+}
+.footer-replace__item {
+    color: rgb(255, 255,255,0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tablet and mobile */
+@media (max-width : 63.9675em) {
+    .header {
+        display: none;
+    }
+    .header-replace {
+        display: flex;
+    }
+    .footer-replace {
+        display: flex;
+    }
+
+}
+
+
+/* responsive tablet */
+
+@media (min-width : 46.25em) and (max-width : 63.9375em) {
+    form.main__sign-in {
+        top: 12%;
+        left: 24%;
+        padding: 0 3rem 1rem 0;
+    }
+    .input__sign-in {
+        margin: 0 0 0 3rem;
+        font-size: 1.4rem;
+    }
+    h1.title-form {
+        margin: 2rem 0 3rem 3rem;
+    }
+
+    /* form title registration */
+    h1.title-form.text-registration {
+        margin: 1rem 0 0 3rem;
+    }
+    .remember-forgot.checkbox-remember {
+        margin: 0.3rem 0 1rem 3rem;
+    }
+    /* form registration */
+
+    .remember-forgot {
+        margin: 2rem 0 2rem 3rem;
+    }
+    .forgot {
+        margin: 0 10px 0 0;
+    }
+    a.btn-login {
+        margin: 0 0 0 3rem;
+    }
+    .not-member {
+        margin: 2rem auto;
+    }
+}
+
+
+
+/* responsive mobile */
+
+@media (max-width : 46.1875em) {
+    form.main__sign-in {
+        padding: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    h1.title-form {
+        font-size: 3rem;
+        margin: 3rem auto 0;
+    }
+
+    /* form title registration */
+    h1.title-form.text-registration {
+        margin: 3rem auto 0;
+    }
+    label.label-in__form.label-registration {
+        padding: 1rem 0 0 1rem;
+    }
+    .remember-forgot.checkbox-remember {
+        margin: 1rem;
+    }
+    /* form registration */
+
+    .input__sign-in {
+        margin: 0 1rem 0 1rem;
+        font-size: 1.3rem;
+        width: unset;
+        height: 4rem;
+    }
+    .remember-forgot {
+        margin: 1.5rem 1rem 1rem 1rem;
+        font-size: 1.2rem;
+    }
+    a.btn-login {
+        margin: 0 1rem 0 1rem;
+        padding: 1.2% 0 0 0;
+    }
+    section.copyright-tablet-mobile {
+        margin: 18rem 0 0 0;
+    }
+    .not-member {
+        margin: 2rem auto;
+        font-size: 1.3rem;
+    }
+}
+/* iphone 5 */
+@media (max-width : 20em) {
+    .not-member {
+        margin: 1rem auto;
+        font-size: 1.2rem;
+    }
+    section.copyright-tablet-mobile {
+        margin: 12rem 0 0 0;
+    }
+    h1.title-form {
+        font-size: 2.6rem;
+    }
+    h1.title-form.text-registration {
+        margin: 3rem auto 0;
+        font-size: 2.6rem;
+    }
+    a.btn-login {
+        height: 4rem;
+    }
+    .remember-forgot.checkbox-remember {
+        margin: 0.5rem 1rem;
+    }
+    label.icon-options.icon-menu {
+        z-index: 1;
+    }
+}

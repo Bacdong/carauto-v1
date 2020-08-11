@@ -1,0 +1,138 @@
+:root{
+    --yellow-color :#ffc300;
+    --white-color:#fff;
+    --text-color:#333;
+    --white-rgb:rgba(255, 255, 255, 0.3);
+    --background-header : #2c2c2c;
+}
+* {
+    overflow: hidden;
+}
+.all__sign-in {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.title-form {
+    font-size: 3.6rem;
+    margin: 2rem 0 4rem 7rem;
+    color: var(--text-color);
+    line-height: 4rem;
+    text-shadow: 1px 1px rgb(255 255 255 / 0.4);
+    user-select: none;
+}
+.main__sign-in {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 7rem 4% 0;
+    position: absolute;
+    background: radial-gradient(rgb(0 0 0 / 0.1), transparent);
+    box-shadow: 1px 1px 20px -6px black;
+    top: 5%;
+    left: 40%;
+}
+.label-in__form {
+    padding: 2rem 0 0 1rem;
+    font-size: 1.6rem;
+}
+.btn-login {
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 5rem;
+    /* min-width: 200px; */
+    font-size: 1.6rem;
+    margin: 0 0 0 7rem;
+    padding: 2.2% 0 0 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    background: var(--white-color);
+    text-align: center;
+    font-size: 2rem;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.btn-login:hover {
+    color: var(--text-color);
+    background-color:rgb(2 2 2 / 0.2);;
+}
+.btn-login:active {
+    color: var(--text-color);
+    background-color: #ffc300;
+}
+.input__sign-in {
+    outline: none;
+    height: 5rem;
+    border-radius: 50px;
+    width: 400px;
+    font-size: 1.6rem;
+    padding-left: 2.4rem;
+    margin: 0 0 0 7rem;
+}
+.pass {
+    margin: 0 0 2.8rem 7rem;
+}
+/* remember forgot */
+.remember-forgot {
+    margin: -1rem 0 2rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.remember-container {
+    display: flex;
+    align-items: center;
+}
+.input__remember {
+    margin: 0 1rem 0 0.3rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    cursor: pointer;
+}
+.remember-text {
+    cursor: default;
+    font-weight: 500;
+}
+.forgot-link {
+    text-decoration: none; 
+    display: block;   
+}
+.forgot-text {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.forgot-text:hover {
+    color: blue;
+}
+.forgot-text:active {
+    color: red;
+}
+/* not-member ---> sing up */
+.not-member {
+    display: flex;
+    margin: 5rem 0 0px 13rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+.not-member__disc {
+    padding: 0 0.3rem 0 0;
+    font-weight: 500;
+    cursor: default;
+}
+.not-member__link {
+    text-decoration: none; 
+    display: block;   
+    color: var(--text-color);
+    font-weight: 500;
+}
+.not-member__link:hover {
+    color: blue;
+}
+.not-member__link:active {
+    color: red;
+}
+
