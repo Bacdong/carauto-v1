@@ -174,7 +174,7 @@ body {
 }
 
 .app {
-    .container {
+    .container-contact {
         width: calc(80% + 0.2rem);
         background-color: $white;
         .title-top {
@@ -203,7 +203,7 @@ body {
     }
 }
 
-.container {
+.container-contact {
     .content {
         padding: 6rem 4rem;
         .content-info {
@@ -321,31 +321,32 @@ body {
     }
 }
 
-.content-last {
+.get-in-touch {
     padding: 1.5rem 3rem;
     h2 {
         font-family: $font;
         color: $black;
         font-weight: 400;
-        margin: 0 0 3rem 0;
+        margin: 0 0 1rem 0;
         font-size: 3rem;
     }
 }
 
 .content-mid {
+    display: flex;
     width: 100%;
-    height: 70rem;
+    // height: 70rem;
     background-color: $background-icon;
 }
 
 .footer-contact {
     width: 50%;
     padding: 1.5rem 0;
-    p {
+    .carauto-lead {
         font-size: 1.8rem;
         box-sizing: border-box;
-        margin: 0 0 1rem;
-        padding-bottom: 1rem;
+        margin: 0 0 0.5rem;
+        padding-bottom: 3rem;
         color: rgba(0, 0, 0, 0.7);
     }
     .btn-contact {
@@ -359,5 +360,166 @@ body {
         font-weight: 400;
         color: $white;
         border-radius: 5.5rem;
+    }
+}
+
+
+/* Mobile */
+
+.navbars-btn {
+    svg {
+        margin-top: -1.2rem;
+        margin-left: 1.6rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        color: black;
+        display: none;
+    }
+}
+
+.container-contact {
+    .nav-overlay {
+        z-index: 20;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+}
+
+.container-contact {
+    .nav-mobile-input:checked~.nav-overlay {
+        display: block;
+    }
+    .nav-mobile-close {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .container-contact {
+        .nav-mobile-close {
+            svg {
+                display: block;
+                width: 2.8rem;
+                height: 2.8rem;
+                color: #666;
+                position: fixed;
+                top: 1rem;
+                left: 10rem;
+            }
+        }
+        .navbars-btn {
+            svg {
+                display: block;
+            }
+        }
+    }
+    body {
+        .app {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .container-contact {
+                width: 100%;
+                .content {
+                    padding: 4rem 1.6rem;
+                    width: 100%;
+                }
+                .content-mid {
+                    width: 100%;
+                }
+                .get-in-touch {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .app {
+        .border {
+            display: none;
+        }
+        .header {
+            transform: translateX(-100%);
+        }
+    }
+    .container-contact {
+        .content {
+            .content-info {
+                margin-top: 6.6rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                //height: unset;
+            }
+        }
+    }
+    .content-info {
+        .info-left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            .left-row {
+                width: 100%;
+            }
+        }
+        .left-row {
+            --size: 10rem;
+            .row-icon {
+                width: var(--size);
+                height: var(--size);
+            }
+            .row-text {
+                height: var(--size);
+            }
+        }
+        .info-right {
+            width: 100%;
+        }
+    }
+    .content-info {
+        .info-right {
+            #contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                #input-name,
+                #input-email,
+                #input-subject,
+                #input-message {
+                    margin-bottom: 1.8rem;
+                }
+            }
+        }
+    }
+    .content {
+        .content-mid {
+            .mid-map {
+                width: 100%;
+                height: 30rem;
+            }
+        }
+    }
+    .get-in-touch {
+        .footer-contact {
+            width: 100%;
+            .carauto-lead {
+                width: 100%;
+            }
+        }
+    }
+    .nav-mobile-input:checked~.navbars-btn {
+        transform: translateX(0);
+    }
+    .navbars-btn {
+        margin-top: 1.6rem;
+        margin-left: 1.6rem;
     }
 }
