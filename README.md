@@ -1,10 +1,10 @@
-### Car Store ###
+# CAR AUTO #
 ```
 Folder name: carstore
 ```
 
-#### Note for participants: ####
-Installation:
+### Note For Participants: ###
+- Installation:
 ```
 - Extension for VSCode:
     Live Sass Compile
@@ -19,7 +19,7 @@ Installation:
             }
     + Turn off VSCode and open again to use.
 ```
-Attension:
+- Attension:
 ```
 - Please operate on the specified branch.
 - Use HTML5/CSS3 and Sass/Scss for project. 
@@ -28,7 +28,7 @@ Attension:
   Thanks!
 ```
 
-To use API:
+- To use API:
 ```
     Change IP address localhost or 127.0.0.1 in your PC with new IP address: carauto.local
     * To use POST method create new product :
