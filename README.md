@@ -35,7 +35,7 @@ Folder name: carstore
         {
             "name": ,
             "image": ,
-            "price": 0,
+            "price": ,
             "brief": ,
             "category": ,
             "status_product": 
