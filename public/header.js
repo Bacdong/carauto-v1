@@ -1,4 +1,4 @@
-var s = `
+var headerContent = `
     <!-- Header -->
 
     <!-- nav mobile  -->
@@ -114,16 +114,17 @@ var s = `
     <!-- /Header -->
 `
 
-var divElement = document.querySelector(".templateStringHeader");
-divElement.innerHTML = s;
+var headerElement = document.querySelector(".header-content");
+headerElement.innerHTML = headerContent;
 
 // fix bug nav mobile
 // which will be triggered when the window resizes
 $( window ).bind("resize", function(){
-    var widthBrowser = $(document).width();
-    var inputTypeCheckboxElement = document.querySelector("#hidden-show-nav");
+    var widthBrowser = $('body').width();
+    console.log(widthBrowser)
+    var inputCheckboxElement = document.querySelector("#hidden-show-nav");
     if(widthBrowser > 739) 
-        inputTypeCheckboxElement.checked = false;
+        inputCheckboxElement.checked = false;
 });
 
 
