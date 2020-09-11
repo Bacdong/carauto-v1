@@ -19,6 +19,7 @@ body {
     font-size: 1.6rem;
 
     .app {
+        user-select: none;
         height: 100%;
         display: flex;
         justify-content: flex-end;
@@ -39,10 +40,11 @@ body {
     width: var(--height);
     margin: 0 0.2rem;
     border-radius: 50%;
+    background-color: $grey;
     @extend %flex-layout;
     padding: 0;
     z-index: 10;
-    top: 67rem;
+    top: 80%;
     left: 2.5rem;
 }
 
@@ -91,6 +93,7 @@ body {
     color: $grey;
 }
 
+/* CSS header */
 .header {
     position: fixed;
     top: 0;
@@ -98,6 +101,9 @@ body {
     bottom: 0;
     width: calc(20% - 1.8rem);
     background-color: $background;
+    transition: all linear 0.26s;
+    z-index: 30;
+
     .header-navbars {
         @extend %flex-layout;
         width: 100%;
@@ -155,7 +161,7 @@ body {
             line-height: 2.6rem;
             text-transform: uppercase;
             text-align: center;
-            letter-spacing: 1px;
+            letter-spacing: .1rem;
         }
         &:hover {
             border-bottom: 1px solid $yellow;
@@ -235,23 +241,116 @@ body {
     }
 }
 
+.open-nav,
+.close-nav {
+    --margin: 4%;
+    position: fixed;
+    left: var(--margin); 
+    top: var(--margin);
+    z-index: 100;
+    font-size: 3.5rem;
+    opacity: 0;
+    display: none;
+    cursor: pointer;
+    transition: all linear 0.24s;
+}
 
+#hidden-show-nav:checked {
+    ~ .header {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    ~ .close-nav{
+        // display: none;
+        // opacity: 0;
+        opacity: 1;
+        display: block;
+        left: calc(4% + 32rem);
+    }
+
+    ~ .open-nav {
+        opacity: 0;
+        display: block;
+        left: calc(4% + 32rem);
+    }
+
+    ~ .nav-overlay {
+        opacity: 1;
+        display: block;
+        transition: all linear 0.24s;
+    }
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* CSS header */
+
+/* CSS section */
 .container {
     width: 80%;
     
     .carousel-container {
         width: 100%;
-        min-height: 100vh;
         position: relative;
-        margin-bottom: 18rem;
+        margin-bottom: 9rem;
         
         .slide-show {
             width: 100%;
-            min-height: 100vh;
             display: flex;
             overflow: hidden;
-
         }
+    }
+}
+
+.author-container {
+    width: 100%;
+    display: flex;
+    height: 9rem;
+
+    .div-title {
+        width: 50%;
+    }
+
+    .div-author {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .btn-contact {
+            margin: 0 0;
+        }
+
+        .login {
+            font-size: 1.9rem;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        .register {
+            text-decoration: none;
+            color: $yellow;
+            font-size: 1.9rem;
+            margin: 0 3.6rem;
+            text-transform: capitalize;
+
+            &:hover {
+                opacity: 0.8;
+                text-decoration: underline;
+            }
+        }
+
     }
 }
 
@@ -259,27 +358,33 @@ body {
     position: relative;
 
     .carousel-item {
-        min-height: 100vh;
         display: none;
         
         img {
             width: 100%;
             margin-right: 0;
             min-height: 100vh;
+            object-fit: fill;
         }
     }
 
 }
 
 .slide-show {
+    
+    #dot1 {
+        top: 77%;
+    }
+
+    #dot3 {
+        top: 83%;
+    }
 
     .dot {
         @extend %dots-layout;
-
-        div {
-           @extend %dots-div;
-        }
     }
+
+    
 
     #slide-1:checked {
         ~ div.item1 {
@@ -288,7 +393,9 @@ body {
         }
 
         ~ #dot1 {
-            background-color: yellow;
+            border-radius: 50%;
+            border: 2px solid $yellow;
+            background-color: transparent;
         }
     }
 
@@ -299,7 +406,9 @@ body {
         }
 
         ~ #dot2 {
-            background-color: yellow;
+            border-radius: 50%;
+            border: 2px solid $yellow;
+            background-color: transparent;
         }
     }
 
@@ -310,18 +419,10 @@ body {
         }
 
         ~ #dot3 {
-            background-color: yellow;
+            border-radius: 50%;
+            border: 2px solid $yellow;
+            background-color: transparent;
         }
-    }
-}
-
-.slide-show {
-    #dot1 {
-        top: 64rem;
-    }
-
-    #dot3 {
-        top: 70rem;
     }
 }
 
@@ -425,7 +526,7 @@ body {
             font-size: 1.4rem;
             letter-spacing: .3rem;
             text-transform: uppercase;
-            line-height: .6rem;
+            line-height: 1.4rem;
         }
     }
 }
@@ -440,6 +541,7 @@ body {
         width: 100%;
 
         img {
+            object-fit: cover;
             width: 100%;
             max-height: 16rem;
         }
@@ -496,6 +598,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    
 
     .img-1,
     .img-6 {
@@ -513,15 +616,17 @@ body {
         width: 100%;
         height: 30rem;
         padding: 1.5rem;
+        object-fit: cover;
     }
 
     .img-car {
         position: relative;
         
+        
         .desc {
             position: absolute;
-            top: 3.2rem;
-            bottom: 3.2rem;
+            top: 2.5rem;
+            bottom: 3.4rem;
             right: 2.5rem;
             left: 2.5rem;
             background-color: rgba(0, 0, 0, 0.8);
@@ -572,6 +677,8 @@ body {
 }
 
 .desc {
+    cursor: pointer;
+    transition: all linear 0.2;
 
     .desc-img {
         width: 100%;
@@ -582,6 +689,7 @@ body {
         margin-bottom: 2.5rem;
 
         img {
+            object-fit: cover;
             transition: .2s;
             width: 100%;
             max-height: 20rem;
@@ -620,7 +728,7 @@ body {
 .footer-container {
     width: 100%;
     padding: 4.8rem $padding-left-right;
-    background: #fafafa;
+    background: $background-overlay;
 
     .footer-content {
         padding: 3rem;
@@ -646,11 +754,19 @@ body {
     height: 5.2rem;
     width: 16rem;
     border-radius: 6rem;
-    background-color: #FFC300;
+    background-color: $yellow;
     @extend %flex-layout;
     margin-bottom: 1.5rem;
 
+    &:hover {
+        opacity: 0.86;
+        transition: all ease 0.2s;
+    }
+
     a {
+        text-align: center;
+        width: 100%;
+        line-height: 5.2rem;
         text-decoration: none;
         color: white;
         font-size: 1.3rem;
@@ -708,12 +824,8 @@ body {
 
 }
 
-
+/* CSS section */
     
-
-
-
-
 
 /* Animation */
 @keyframes anim-carousel-show {
@@ -731,7 +843,24 @@ body {
 /* Mobile: width < 740px*/
 @media only screen and (max-width: 46.1875em) {
     .header {
-        display: none;
+        min-width: 30rem;
+        transform: translateX(-150%);
+        opacity: 0;
+        transition: all linear 0.26s;
+    }
+
+    .box-shadow-on-mobile-tablet {
+        box-shadow: 0 1px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .open-nav {
+        opacity: 1;
+        display: block;
+    }
+
+    .close-nav {
+        opacity: 0;
+        display: block;
     }
 
     .container {
@@ -772,6 +901,7 @@ body {
 
     .work-container {
         padding: 0 0;
+
         .work-content {
             .img-car {
                 width: 100%;
@@ -807,6 +937,17 @@ body {
         .statistical-list {
             height: 170vh;
             flex-direction: column;
+        }
+    }
+
+    .author-container {
+
+        .div-title {
+            display: none;
+        }
+
+        .div-author {
+            width: 100%;
         }
     }
 

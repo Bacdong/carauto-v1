@@ -9,6 +9,10 @@
         <!-- Css -->
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/icon.css">
+        <!-- Animation on scroll -->
+        <link rel="stylesheet" href="assets/lbr-anim-scroll/aos.css">
+        <!-- Animation on scroll -->
+
         <!-- /css -->
 
         <!-- Google Fonts -->
@@ -22,110 +26,35 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"></script>
         <!-- /Jquery CDN -->
+
     </head>
 
     <body>
         <section class="app">
             <!-- Header -->
-            <header class="header">
-                <nav class="header-navbars">
-
-                    <!-- title/name website -->
-                    <section class="navbars-title">
-                        <a href="./index.html" class="navbars-title__link">
-                            <h1>Car Auto</h1>
-                        </a>
-                    </section>
-                    <!-- /title/name website -->
-    
-                    <!-- list category -->
-                    <menu class="navbars-menu">
-                        <ul class="menu-list">
-                            <li class="list-item active">
-                                <a href="" class="item-link">HOME</a>
-                            </li>
-    
-                            <li class="list-item">
-                                <a href="" class="item-link">PRODUCTS</a>
-                            </li>
-    
-                            <li class="list-item">
-                                <a href="" class="item-link">ABOUT</a>
-                            </li>
-    
-                            <li class="list-item">
-                                <a href="" class="item-link">SERVICES</a>
-                            </li>
-    
-                            <li class="list-item">
-                                <a href="" class="item-link">BLOG</a>
-                            </li>
-    
-                            <li class="list-item">
-                                <a href="template/contact/contact.html" 
-                                    class="item-link">CONTACT</a>
-                            </li>
-                        </ul>
-                    </menu>
-                    <!-- /list category -->
-    
-                    <!-- footer -->
-                    <footer class="navbars-info">
-                        <!-- copyright -->
-                        <section class="info-brief">
-                            <p>
-                                &copy; Copyright &copy;
-                                <script type="text/javascript">
-                                    let currentDay = new Date();
-                                    let currentYear = currentDay.getFullYear();
-                                    document.write(currentYear);
-                                </script>
-                                All right reserved | Development by MyTeam.
-                            </p>
-                        </section>
-                        <!-- /copyright -->
-    
-                        <!-- social contact -->
-                        <menu class="info-social">
-                            <ul class="social-list">
-                                <li class="social-item">
-                                    <a href="https://www.facebook.com/DuongBacDong.2000/" 
-                                        class="social-link" target="_blank">
-                                        <i class="icon-facebook"></i>
-                                    </a>
-                                </li>
-    
-                                <li class="social-item">
-                                    <a href="https://www.twitter.com/Bacdong/" 
-                                        class="social-link" target="_blank">
-                                        <i class="icon-twitter"></i>
-                                    </a>
-                                </li>
-    
-                                <li class="social-item">
-                                    <a href="https://www.instagram.com/" 
-                                        class="social-link" target="_blank">
-                                        <i class="icon-instagram"></i>
-                                    </a>
-                                </li>
-    
-                                <li class="social-item">
-                                    <a href="tel:+84915272291" class="social-link" target="_blank">
-                                        <i class="icon-telegram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </menu>
-                        <!-- /social contact -->
-                    </footer>
-                    <!-- /footer -->
-
-                </nav>
-            </header>
+            <header class="header-content"></header>
             <!-- /Header -->
     
             <!-- Main -->
             <main class="container">
+                <section class="author-container">
+                    <div class="div-title">
+
+                    </div>
+
+                    <div class="div-author">
+                        <div class="btn-contact">
+                            <a href="#" class="login">
+                                Sign in
+                            </a>
+                        </div>
+
+                        <a href="#" class="register">
+                            sign up
+                        </a>
+                    </div>
+                </section>
+
                 <section class="carousel-container">
 
                     <section class="slide-show">
@@ -133,9 +62,9 @@
                         <input type="radio" id="slide-2" name="check-slide" hidden>
                         <input type="radio" id="slide-3" name="check-slide" hidden>
 
-                        <label id="dot1" class="dot" for="slide-1"><div></div></label> 
-                        <label id="dot2" class="dot" for="slide-2"><div></div></label> 
-                        <label id="dot3" class="dot" for="slide-3"><div></div></label> 
+                        <label id="dot1" class="dot" for="slide-1"></label> 
+                        <label id="dot2" class="dot" for="slide-2"></label> 
+                        <label id="dot3" class="dot" for="slide-3"></label> 
                         
                         <div class="carousel-item item1">
                             <img src="./images/banner/banner1.jpg" alt="" >
@@ -153,11 +82,18 @@
                 </section>
 
                 <section class="welcome-container">
-                    <div class="welcome-left">
+                    <div class="welcome-left" 
+                    data-aos="fade-right" 
+                    data-aos-easing="ease"
+                    data-aos-duration="1000">
                         <img src="./images/banner/banner4.jpg" alt="" >
                     </div>
 
-                    <acticle class="welcome-right">
+                    <acticle class="welcome-right" 
+                        data-aos="fade-right" 
+                        data-aos-easing="ease"
+                        data-aos-delay="200"
+                        data-aos-duration="1000">
                         <span class="heading-meta">WELCOME</span>
                         <h2 class="colorlib-heading">Who we are</h2>
                         <p>
@@ -179,14 +115,22 @@
                 </section>
 
                 <section class="services-container">
-                    <section class="heading">
+                    <section class="heading"
+                    data-aos="fade-right" 
+                    data-aos-easing="linear"
+                    data-aos-delay="400"
+                    data-aos-duration="500">
                         <span class="heading-meta">What I do?</span>
                         <h2 class="colorlib-heading">Here are some of my expertise</h2>
                     </section>
 
                     <section class="content">
                         <section class="content-left">
-                            <acticle class="feature">
+                            <acticle class="feature"
+                            data-aos="fade-right" 
+                            data-aos-easing="linear"
+                            data-aos-delay="600"
+                            data-aos-duration="500">
                                 <div class="feature-icon">
                                     <!-- Gán icon i vào đây -->
                                 </div>
@@ -201,7 +145,11 @@
                                 </div>
                             </acticle>
 
-                            <acticle class="feature">
+                            <acticle class="feature"
+                            data-aos="fade-right" 
+                            data-aos-easing="linear"
+                            data-aos-delay="800"
+                            data-aos-duration="500">
                                 <div class="feature-icon">
                                     <!-- Gán icon i vào đây -->
                                 </div>
@@ -216,7 +164,11 @@
                                 </div>
                             </acticle>
 
-                            <acticle class="feature">
+                            <acticle class="feature"
+                            data-aos="fade-right" 
+                            data-aos-easing="linear"
+                            data-aos-delay="1000"
+                            data-aos-duration="500">
                                 <div class="feature-icon">
                                     <!-- Gán icon i vào đây -->
                                 </div>
@@ -231,7 +183,11 @@
                                 </div>
                             </acticle>
 
-                            <acticle class="feature">
+                            <acticle class="feature"
+                            data-aos="fade-right" 
+                            data-aos-easing="linear"
+                            data-aos-delay="1200"
+                            data-aos-duration="500">
                                 <div class="feature-icon">
                                     <!-- Gán icon i vào đây -->
                                 </div>
@@ -249,7 +205,11 @@
 
                         <section class="content-right">
                             <figure class="div-img-left">
-                                <section class="item">
+                                <section class="item"
+                                data-aos="fade-left" 
+                                data-aos-easing="linear"
+                                data-aos-delay="1400"
+                                data-aos-duration="500">
                                     <div class="div-img">
                                         <img src="./images/banner/banner5.jpg" alt="">
                                     </div>
@@ -259,7 +219,11 @@
                                     </div>
                                 </section>
 
-                                <section class="item">
+                                <section class="item"
+                                data-aos="fade-left" 
+                                data-aos-easing="linear"
+                                data-aos-delay="1600"
+                                data-aos-duration="500">
                                     <div class="div-img">
                                         <img src="./images/banner/banner5.jpg" alt="">
                                     </div>
@@ -269,7 +233,11 @@
                                     </div>
                                 </section>
                                 
-                                <section class="item">
+                                <section class="item"
+                                data-aos="fade-left" 
+                                data-aos-easing="linear"
+                                data-aos-delay="1800"
+                                data-aos-duration="500">
                                     <div class="div-img">
                                         <img src="./images/banner/banner5.jpg" alt="">
                                     </div>
@@ -281,7 +249,11 @@
                             </figure>
 
                             <figure class="div-img-right">
-                                <section class="item">
+                                <section class="item"
+                                data-aos="fade-left" 
+                                data-aos-easing="linear"
+                                data-aos-delay="2000"
+                                data-aos-duration="500">
                                     <div class="div-img">
                                         <img src="./images/banner/banner5.jpg" alt="">
                                     </div>
@@ -291,7 +263,11 @@
                                     </div>
                                 </section>
 
-                                <section class="item">
+                                <section class="item"
+                                data-aos="fade-left" 
+                                data-aos-easing="linear"
+                                data-aos-delay="2200"
+                                data-aos-duration="500">
                                     <div class="div-img">
                                         <img src="./images/banner/banner5.jpg" alt="">
                                     </div>
@@ -308,25 +284,41 @@
                 <section class="statistical-container">
                     <div class="statistical-list">
 
-                        <div class="item-statistical">
+                        <div class="item-statistical"
+                        data-aos="fade-up"
+                        data-aos-easing="ease"
+                        data-aos-delay="400"
+                        data-aos-duration="1000">
                             <div></div>
                             <span>1539</span>
                             <p>PROJECTS</p>
                         </div>
 
-                        <div class="item-statistical">
+                        <div class="item-statistical"
+                        data-aos="fade-up"
+                        data-aos-easing="ease"
+                        data-aos-delay="600"
+                        data-aos-duration="1000">
                             <div></div>
                             <span>1539</span>
                             <p>PROJECTS</p>
                         </div>
 
-                        <div class="item-statistical">
+                        <div class="item-statistical"
+                        data-aos="fade-up"
+                        data-aos-easing="ease"
+                        data-aos-delay="800"
+                        data-aos-duration="1000">
                             <div></div>
                             <span>1539</span>
                             <p>PROJECTS</p>
                         </div>
 
-                        <div class="item-statistical">
+                        <div class="item-statistical"
+                        data-aos="fade-up"
+                        data-aos-easing="ease"
+                        data-aos-delay="1000"
+                        data-aos-duration="1000">
                             <div></div>
                             <span>1539</span>
                             <p>PROJECTS</p>
@@ -337,40 +329,80 @@
 
                 <section class="work-container">
 
-                    <div class="heading">
+                    <div class="heading"
+                    data-aos="fade-right"
+                    data-aos-easing="ease"
+                    data-aos-delay="400"
+                    data-aos-duration="1000">
                         <span class="heading-meta">MY WORK</span>
                         <h2 class="colorlib-heading">RECENT WORK</h2>
                     </div>
                     
                     <div class="work-content">
-                        <div class="img-car img-1">
-                            <div class="desc"></div>
-                            <img src="./images/banner/banner6.jpg" alt="">
+                        <div class="img-car img-1"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="600"
+                        data-aos-duration="1000">
+                            <a href="#">
+                                <div class="desc"></div>
+                                <img src="./images/banner/banner6.jpg" alt="">
+                            </a>
                         </div>
 
-                        <div class="img-car img-2">
-                            <div class="desc"></div>
-                            <img src="./images/banner/banner6.jpg" alt="">
+                        <div class="img-car img-2"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="800"
+                        data-aos-duration="1000">
+                            <a href="#">
+                                <div class="desc"></div>
+                                <img src="./images/banner/banner6.jpg" alt="">
+                            </a>
                         </div>
 
-                        <div class="img-car img-3">
-                            <div class="desc"></div>
-                            <img src="./images/banner/banner6.jpg" alt="">
+                        <div class="img-car img-3"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="1000"
+                        data-aos-duration="1000">
+                            <a href="#">
+                                <div class="desc"></div>
+                                <img src="./images/banner/banner6.jpg" alt="">
+                            </a>
                         </div>
 
-                        <div class="img-car img-4">
-                            <div class="desc"></div>
-                            <img src="./images/banner/banner6.jpg" alt="">
+                        <div class="img-car img-4"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="1200"
+                        data-aos-duration="1000">
+                            <a href="#">
+                                <div class="desc"></div>
+                                <img src="./images/banner/banner6.jpg" alt="">
+                            </a>
                         </div>
 
-                        <div class="img-car img-5">
-                            <div class="desc"></div>
-                            <img src="./images/banner/banner6.jpg" alt="">
+                        <div class="img-car img-5"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="1400"
+                        data-aos-duration="1000">
+                            <a href="#">
+                                <div class="desc"></div>
+                                <img src="./images/banner/banner6.jpg" alt="">
+                            </a>
                         </div>
 
-                        <div class="img-car img-6">
-                            <div class="desc"></div>
-                            <img src="./images/banner/banner6.jpg" alt="">
+                        <div class="img-car img-6"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="1600"
+                        data-aos-duration="1000">
+                            <a href="#">
+                                <div class="desc"></div>
+                                <img src="./images/banner/banner6.jpg" alt="">
+                            </a>
                         </div>
                     </div>
 
@@ -378,14 +410,22 @@
 
                 <section class="read-container">
 
-                    <div class="heading">
+                    <div class="heading"
+                    data-aos="fade-right"
+                    data-aos-easing="ease"
+                    data-aos-delay="400"
+                    data-aos-duration="1000">
                         <span class="heading-meta">READ</span>
                         <h2 class="colorlib-heading">RECENT BLOG</h2>
                     </div>
 
                     <div class="blog-entry">
 
-                        <div class="desc">
+                        <div class="desc"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="600"
+                        data-aos-duration="1000">
                             <div class="desc-img">
                                 <img src="./images/banner/banner4.jpg" alt="">
                             </div>
@@ -399,7 +439,11 @@
                             </div>
                         </div>
 
-                        <div class="desc">
+                        <div class="desc"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="800"
+                        data-aos-duration="1000">
                             <div class="desc-img">
                                 <img src="./images/banner/banner4.jpg" alt="">
                             </div>
@@ -413,7 +457,11 @@
                             </div>
                         </div>
 
-                        <div class="desc">
+                        <div class="desc"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="1000"
+                        data-aos-duration="1000">
                             <div class="desc-img">
                                 <img src="./images/banner/banner4.jpg" alt="">
                             </div>
@@ -427,7 +475,11 @@
                             </div>
                         </div>
 
-                        <div class="desc">
+                        <div class="desc"
+                        data-aos="fade-right"
+                        data-aos-easing="ease"
+                        data-aos-delay="1200"
+                        data-aos-duration="1000">
                             <div class="desc-img">
                                 <img src="./images/banner/banner4.jpg" alt="">
                             </div>
@@ -445,7 +497,9 @@
 
                 </section>
 
-                <footer class="footer-container">
+                <footer class="footer-container"
+                data-aos="fade-right"
+                data-aos-duration="1500">
 
                     <div class="footer-content">
                         <h2>Get in Touch!</h2>
@@ -471,6 +525,19 @@
                 console.log('Initial teamwork project!');
             });
         </script>
+
+        <script src="./assets/js/main.js"></script>
+
+         <!-- Animation on scroll -->
+        <script src="./assets/lbr-anim-scroll/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+         <!-- Animation on scroll -->
+
+         <!-- Link Header -->
+        <script src="./public/header.js"></script>
+         <!-- Link Header -->
         
     </body>
 </html>
