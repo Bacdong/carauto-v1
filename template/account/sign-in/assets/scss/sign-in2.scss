@@ -1,0 +1,162 @@
+@import 'variable_sign-in';
+
+* {
+    overflow: hidden;
+}
+
+.all__sign-in {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+// form 
+form.main__sign-in {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 7rem 4% 0;
+    position: absolute;
+    background: radial-gradient(rgba(0 ,0, 0 , 0.1), transparent);
+    box-shadow: 1px 1px 20px -6px black;
+    top: 5%;
+    left: 40%;
+    
+    // h1--Title-- LOGIN,REGISTRATION
+    h1.title-form {
+        font-size: 3.6rem;
+        margin: 2rem 0 4rem 7rem;
+        color: $text-color;
+        line-height: 4rem;
+        text-shadow: 1px 1px rgba(255, 255,255,0.4);
+        user-select: none;
+    }
+
+    // label 
+
+    .label-in__form {
+        padding: 2rem 0 0 1rem;
+        font-size: 1.6rem;
+    }
+}
+
+form.main__sign-in{
+
+    .input__sign-in {
+    outline: none;
+    height: 5rem;
+    border-radius: 50px;
+    width: 400px;
+    font-size: 1.6rem;
+    padding-left: 2.4rem;
+    margin: 0 0 0 7rem;
+    }
+
+    .pass {
+    margin: 0 0 2.8rem 7rem;
+    }
+}
+// remember - forgot
+.remember-forgot {
+    margin: -1rem 0 2rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: $text-color;
+
+    .remember-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.remember-container {
+    .input__remember {
+        margin: 0 1rem 0 0.3rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        cursor: pointer;
+    }
+    .remember-text {
+        cursor: default;
+        font-weight: 500;
+    }
+}
+.forgot {
+    .forgot-link {
+        text-decoration: none; 
+        display: block;  
+        .forgot-text {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+    }
+}
+.forgot-text:hover {
+    color: blue;
+}
+.forgot-text:active {
+    color: red;
+}
+
+// btn login & registration
+a.btn-login {
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin: 0 0 0 7rem;
+    padding: 2.2% 0 0 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    background: $white-color;
+    text-align: center;
+    font-size: 2rem;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    font-weight: 500;
+    color: $text-color; 
+}
+a.btn-login:hover {
+    color: $text-color;
+    background-color:rgba(2,2,2,0.2);
+}
+a.btn-login:active {
+    color: $text-color;
+    background-color: $yellow-color;
+}
+
+
+
+// not-member
+
+form.main__sign-in{
+
+    .not-member {
+        display: flex;
+        margin: 5rem 0 0px 13rem;
+        font-size: 1.4rem;
+        letter-spacing: 1px;  
+    }
+}
+.not-member {
+    .not-member__disc {
+        padding: 0 0.3rem 0 0;
+        font-weight: 500;
+        cursor: default;
+    }
+
+    .not-member__link {
+        text-decoration: none; 
+        display: block;   
+        color: $text-color;
+        font-weight: 500;
+    }
+    .not-member__link:hover {
+        color: blue;
+    }
+    .not-member__link:active {
+        color: red;
+    }
+}
