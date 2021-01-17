@@ -1,6 +1,6 @@
 # CAR AUTO #
 
-[Visit Page](https://bacdong.github.io/car_store/index.html)
+[Visit Page](https://bacdong.github.io/carauto-v1/)
 
 ```
 Folder name: carstore
